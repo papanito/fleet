@@ -52,7 +52,7 @@ jobs:
         run: go install github.com/onsi/ginkgo/v2/ginkgo@v2.1.1
       -
         name: Authenticate to GCP
-        uses: 'google-github-actions/auth@v0'
+        uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: '${{ github.events.inputs.fleetci_gcp_credentials || secrets.FLEETCI_GCP_CREDENTIALS }}'
       -
